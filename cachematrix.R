@@ -50,6 +50,9 @@ cacheSolve(cacheMatrix2) # Should display "calculating the inverse"
 cacheSolve(cacheMatrix2) # Should display "getting data from cache"
 cacheSolve(cacheMatrix) # Should display "getting data from cache"
 
+cacheMatrix$set(matrix(rnorm(16),4))
+cacheSolve(cacheMatrix) # Should display "calculating the inverse"
+
 myBigMatrix <- matrix(rnorm(5000*5000), 5000)
 cacheBigMatrix <- makeCacheMatrix(myBigMatrix)
 result <- cacheSolve(cacheBigMatrix) # Should display "calculating the inverse" and take a long time
